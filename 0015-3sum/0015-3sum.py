@@ -3,10 +3,11 @@ class Solution:
         res = []
         n = len(nums)
         nums.sort()
-        for i in range(0, n - 2):
+        for i in range(n - 2):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
-
+            
+            if nums[i] > 0: break
             left = i + 1
             right = n - 1
             while left < right:
